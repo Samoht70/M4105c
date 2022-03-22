@@ -39,6 +39,13 @@ return [
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
+        ],'operateur' => [
+            'driver' => 'session',
+            'provider' => 'operateur',
+        ],
+        'responsable' => [
+            'driver' => 'session',
+            'provider' => 'responsable',
         ],
     ],
 
@@ -62,7 +69,14 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => App\Models\User::class,
+            'model' => App\Models\Demandeur::class,
+        ],'operateur' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Operateur::class,
+        ],
+        'responsable' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Responsable_service::class,
         ],
 
         // 'users' => [
